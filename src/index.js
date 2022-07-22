@@ -10,9 +10,26 @@ import reportWebVitals from './reportWebVitals';
    // <App />
   //</React.StrictMode>
 //);
-const Hello = () => <p>Hello world</p>
+
+const Li = ({ children, estado, age, casa }) =>{
+  console.log(age, casa)
+  return(
+    <li>{children} estoy {estado}</li>
+  )
+} 
+const Test = () => 
+  <ul>
+    <Li estado={'feliz'}
+        age={19}
+        casa={false}>
+        Chachito
+    </Li>
+    <Li estado={'triste'}>Chachito</Li>
+    <Li estado={'enocionado'}>Felix</Li>
+  </ul>
+
 ReactDOM.render(
-  <Hello />, document.getElementById('root')
+  <Test />, document.getElementById('root')
 )
 
 // If you want to start measuring performance in your app, pass a function
